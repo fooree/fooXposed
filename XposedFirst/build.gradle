@@ -6,7 +6,7 @@ android {
 
 
     defaultConfig {
-        applicationId "foo.ree.demos.first"
+        applicationId "foo.ree.demos.x1st"
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 1

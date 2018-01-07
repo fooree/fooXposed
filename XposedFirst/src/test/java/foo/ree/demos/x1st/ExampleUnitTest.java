@@ -1,4 +1,4 @@
-package foo.ree.demos.first;
+package foo.ree.demos.x1st;
 
 import org.junit.Test;
 

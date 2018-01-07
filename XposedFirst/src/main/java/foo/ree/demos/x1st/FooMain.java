@@ -1,10 +1,9 @@
-package foo.ree.demos.first;
+package foo.ree.demos.x1st;
 
 import android.app.Activity;
 import android.app.AndroidAppHelper;
 import android.app.Application;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Toast;
 
 import de.robv.android.xposed.IXposedHookLoadPackage;
