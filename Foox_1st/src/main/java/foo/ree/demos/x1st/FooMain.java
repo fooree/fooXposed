@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.app.AndroidAppHelper;
 import android.app.Application;
 import android.os.Bundle;
+import android.os.Process;
+import android.util.Log;
 import android.widget.Toast;
 
 import de.robv.android.xposed.IXposedHookLoadPackage;
@@ -22,8 +24,11 @@ public class FooMain implements IXposedHookLoadPackage {
     public static final String TAG = FooMain.class.getSimpleName();
 
     @Override
-    public void handleLoadPackage(LoadPackageParam lpparam) throws Throwable {
-        if (!"com.netease.newsreader.activity".equals(lpparam.packageName)) {
+    public void handleLoadPackage(final LoadPackageParam lpparam) throws Throwable {
+        Log.i(TAG, "inject into process: " + Process.myPid());
+
+        if (lpparam.appInfo == null) {
+            Log.i(TAG, "ApplicationInfo is null");
             return;
         }
 
@@ -32,7 +37,9 @@ public class FooMain implements IXposedHookLoadPackage {
             protected void afterHookedMethod(MethodHookParam param) throws Throwable {
                 Application context = AndroidAppHelper.currentApplication();
                 String classname = param.thisObject.getClass().getName();
-                Toast.makeText(context, classname, Toast.LENGTH_SHORT).show();
+                String text = lpparam.packageName + "\n" + classname;
+                Log.i(TAG, text);
+                Toast.makeText(context, text, Toast.LENGTH_SHORT).show();
             }
         });
     }
