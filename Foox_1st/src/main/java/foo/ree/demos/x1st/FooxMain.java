@@ -25,12 +25,7 @@ public class FooxMain implements IXposedHookLoadPackage {
 
     @Override
     public void handleLoadPackage(final LoadPackageParam lpparam) throws Throwable {
-        Log.i(TAG, "inject into process: " + Process.myPid());
-
-        if (lpparam.appInfo == null) {
-            Log.i(TAG, "ApplicationInfo is null");
-            return;
-        }
+        Log.i(TAG, "inject into process: " + Process.myPid() + ", package: " + lpparam.packageName);
 
         XposedHelpers.findAndHookMethod(Activity.class, "onCreate", Bundle.class, new XC_MethodHook() {
             @Override
