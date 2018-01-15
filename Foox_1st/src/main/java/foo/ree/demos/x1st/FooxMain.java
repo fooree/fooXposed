@@ -15,13 +15,13 @@ import de.robv.android.xposed.callbacks.XC_LoadPackage.LoadPackageParam;
 
 /**
  * Toast shows the activity when onCreate method is invoked.
- * <p>
+ * <p>android.app.Activity#onCreate(android.os.Bundle)
  * Created by fooree on 2018/1/7.
  */
 
 public class FooxMain implements IXposedHookLoadPackage {
 
-    public static final String TAG = FooxMain.class.getSimpleName();
+    private static final String TAG = FooxMain.class.getSimpleName();
 
     @Override
     public void handleLoadPackage(final LoadPackageParam lpparam) throws Throwable {
