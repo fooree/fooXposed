@@ -1,1 +1,1 @@
-include ':app', ':Foox_1st'
+include ':Foox_1st', ':Foox_2nd', ':DumpDex'
