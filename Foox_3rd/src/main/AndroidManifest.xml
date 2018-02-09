@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="foo.ree.demos.x1st">
+    package="foo.ree.demos.x3rd">
 
     <application
         android:allowBackup="true"
@@ -9,21 +8,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="foo.ree.demos.x1st.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <meta-data
             android:name="xposedmodule"
             android:value="true" />
         <meta-data
             android:name="xposeddescription"
-            android:value="first Xposed demo" />
+            android:value="HTTP HOOK" />
         <meta-data
             android:name="xposedminversion"
             android:value="54" />
+
     </application>
 </manifest>
