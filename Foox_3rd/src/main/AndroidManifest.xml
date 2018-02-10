@@ -14,7 +14,7 @@
             android:value="true" />
         <meta-data
             android:name="xposeddescription"
-            android:value="HTTP HOOK" />
+            android:value="SO HOOK" />
         <meta-data
             android:name="xposedminversion"
             android:value="54" />
