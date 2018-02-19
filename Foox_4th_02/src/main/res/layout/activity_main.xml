@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="foo.ree.demos.x4th02.MainActivity">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="decryptText"
+        android:text="@string/decrypt_follow_text" />
+
+    <TextView
+        android:id="@+id/hello_dex"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/encoded_string"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="10pt" />
+
+</LinearLayout>
