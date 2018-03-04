@@ -1,1 +1,1 @@
-include ':Foox_1st', ':Foox_1stx', ':Foox_2nd', ':DumpDex', ':Foox_3rd', ':Foox_4th_01', ':Foox_4th_02', ':Foox_4th_03'
+include ':Foox_1st', ':Foox_1stx', ':Foox_2nd', ':DumpDex', ':Foox_3rd', ':Foox_4th_01', ':Foox_4th_02', ':Foox_4th_03', ':Foox_05th'
