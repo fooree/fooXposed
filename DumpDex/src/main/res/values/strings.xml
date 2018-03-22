@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DumpDex</string>
+    <string name="applications">应用列表</string>
+    <string name="app_icon">Application Icon</string>
+    <string name="version_name">Version Name:</string>
+    <string name="version_code">Version Code:</string>
+</resources>
