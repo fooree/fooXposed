@@ -78,12 +78,11 @@ public abstract class EasyHook implements IXposedHookLoadPackage {
             TAG = getClass().getSimpleName();
             Log.i(TAG, "Inject code into application " + lpp.packageName);
             try {
+                hookLoadClass();
                 onLoadPackage(lpp);
             } catch (Throwable e) {
                 Log.i(TAG, e.getLocalizedMessage(), e);
             }
-
-            hookLoadClass();
         }
     }
 
