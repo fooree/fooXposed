@@ -1,5 +1,8 @@
 package foo.ree.demos.easyxp;
 
+import android.app.Activity;
+import android.os.Bundle;
+
 import java.util.Arrays;
 
 import de.robv.android.xposed.XC_MethodHook;
@@ -36,6 +39,12 @@ public class EasyUseDemo extends EasyHook {
                         XposedBridge.log(param.method + " return: " + param.getResult());
                     }
                 });
+            }
+        });
+        findAndHookMethod(Activity.class, "onCreate", Bundle.class, new XC_MethodHook() {
+            @Override
+            protected void afterHookedMethod(MethodHookParam param) throws Throwable {
+                XposedBridge.log(param.method + " this: " + param.thisObject);
             }
         });
     }
