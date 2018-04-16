@@ -34,7 +34,8 @@ int my_luaL_loadbuffer(void *lua_state, char *buff, size_t size, char *name) {
 }
 
 
-JNIEXPORT jint JNICALL __unused JNI_OnLoad(JavaVM *vm) {
+//JNIEXPORT jint JNICALL __unused JNI_OnLoad(JavaVM *vm, void* reserved){ // 使用这行代码，我的环境编译出错
+JNIEXPORT jint JNICALL __unused JNI_OnLoad(JavaVM *vm) {    // 我的环境只能使用这行代码，如果编译JNI_OnLoad出错，请使用上一行代码
     LOG_INFO("JNI_OnLoad enter");
 
     JNIEnv *env = NULL;
