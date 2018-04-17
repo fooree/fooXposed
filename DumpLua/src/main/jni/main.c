@@ -10,8 +10,7 @@
 #define TAG "DumpLua"
 #define LOG_INFO(...)  __android_log_print(ANDROID_LOG_INFO, TAG, __VA_ARGS__)
 
-#define PACKAGE_NAME "com.njp.one" // 目标应用的包名
-//#define PACKAGE_NAME "target.app.package.name" //目标应用的包名
+#define PACKAGE_NAME "target.package.name" // 目标应用的包名
 #define TARGET_SO "/data/data/%s/lib/libcocos2dlua.so" // 目标应用的libcocos2dlua.so
 
 int (*origin_luaL_loadbuffer)(void *lua_state, char *buff, size_t size, char *name) = NULL;

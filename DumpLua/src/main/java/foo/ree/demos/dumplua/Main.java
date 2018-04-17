@@ -23,7 +23,7 @@ public class Main implements IXposedHookLoadPackage {
 
     @Override
     public void handleLoadPackage(XC_LoadPackage.LoadPackageParam lpp) throws Throwable {
-        if (!"target.app.package.name".equals(lpp.packageName)) return;
+        if (!"target.package.name".equals(lpp.packageName)) return;
 
         findAndHookMethod(Runtime.class, "doLoad", String.class, ClassLoader.class, new XC_MethodHook() {
             @Override
