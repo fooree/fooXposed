@@ -27,7 +27,7 @@ import static de.robv.android.xposed.XposedHelpers.findAndHookMethod;
 public class DexHook implements IXposedHookZygoteInit, IXposedHookLoadPackage {
 
     private static final String TAG = DexHook.class.getSimpleName();
-    private static final File DUMP_PATH = new File("/data/local/tmp/dumpdex/");
+        private static final File DUMP_PATH = new File("/data/local/tmp/dumpdex/");
     private final XSharedPreferences shares = new XSharedPreferences(Constants.THIS_MODULE, Constants.HOOK_CONFIG);
 
     @Override
@@ -75,6 +75,7 @@ public class DexHook implements IXposedHookZygoteInit, IXposedHookLoadPackage {
         DUMP_PATH.mkdirs();
         DUMP_PATH.setReadable(true, false);
         DUMP_PATH.setWritable(true, false);
+        DUMP_PATH.setExecutable(true, false);
     }
 
     static class IO implements Runnable {
